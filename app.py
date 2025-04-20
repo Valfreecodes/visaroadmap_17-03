@@ -5,9 +5,19 @@ from agent3 import graph_app
 #from demo import graph_app
 from prompt import travel_visa,study_visa,work_visa
 from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
 load_dotenv()
 
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 def get_roadmap_from_type(prompt):
     response = openai.chat.completions.create(
