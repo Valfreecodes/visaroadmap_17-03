@@ -1,0 +1,23 @@
+{
+  "name": "langchain-agent",
+  "version": "1.0.0",
+  "description": "A project for calculating CRS scores and managing user feedback.",
+  "main": "src/app.py",
+  "scripts": {
+    "start": "python src/app.py",
+    "test": "pytest"
+  },
+  "dependencies": {
+    "langchain": "^0.0.1",
+    "dotenv": "^10.0.0",
+    "pydantic": "^1.8.2",
+    "langchain_openai": "^0.0.1",
+    "langchain_core": "^0.0.1",
+    "langchain_community": "^0.0.1"
+  },
+  "devDependencies": {
+    "pytest": "^6.2.4"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
