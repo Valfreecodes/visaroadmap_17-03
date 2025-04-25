@@ -265,7 +265,7 @@ def parse_llm_response(structured_data: str) -> dict:
             start_date = datetime.strptime(start_date_str, '%Y-%m-%d').date()
             end_date = datetime.strptime(end_date_str, '%Y-%m-%d').date() if end_date_str else date.today()
             experience_years = (end_date - start_date).days / 365
-            return min(max(0, round(experience_years)), 5)  # Cap at 5 years
+            return min(max(0, round(experience_years)), 3)  # Cap at 3 years
             
         # Additional date-based validations can be added here
         
